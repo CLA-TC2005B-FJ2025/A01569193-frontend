@@ -63,6 +63,10 @@ function ActualizarPersonaje() {
                         <label>Email:</label>
                         <input type="email" name="email" value={personaje.email || ''} onChange={handleInputChange} required />
                     </div>
+                    <div>
+                        <label>Whatsapp:</label>
+                        <input type="number" name="Whatsapp" value={personaje.Whatsapp || ''} onChange={handleInputChange} required />
+                    </div>
                     <button type="submit">Actualizar Personaje</button>
                 </form>
             )}
