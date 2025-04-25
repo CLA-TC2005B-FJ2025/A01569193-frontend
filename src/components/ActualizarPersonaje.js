@@ -65,7 +65,7 @@ function ActualizarPersonaje() {
                     </div>
                     <div>
                         <label>Whatsapp:</label>
-                        <input type="number" name="Whatsapp" value={personaje.Whatsapp || ''} onChange={handleInputChange} required />
+                        <input type="number" name="Whatsapp" value={personaje.whatsapp || ''} onChange={handleInputChange} required />
                     </div>
                     <button type="submit">Actualizar Personaje</button>
                 </form>

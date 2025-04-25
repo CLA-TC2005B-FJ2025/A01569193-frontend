@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { createPersonaje } from '../api';
 
 function CrearPersonaje() {
-    const [nuevoPersonaje, setNuevoPersonaje] = useState({ id: '', name: '', email: '', whatsapp: ''});
+    const [nuevoPersonaje, setNuevoPersonaje] = useState({ id: '', name: '', email: '', whatsapp: '' });
     const [mensaje, setMensaje] = useState('');
     const [error, setError] = useState(null);
 
@@ -16,7 +16,7 @@ function CrearPersonaje() {
             const response = await createPersonaje(nuevoPersonaje);
             setMensaje(response.mensaje);
             setError(null);
-            setNuevoPersonaje({ id: '', name: '', email: '' , whatsapp: ''}); // Limpiar el formulario
+            setNuevoPersonaje({ id: '', name: '', email: '', whatsapp: '' }); // Limpiar el formulario
         } catch (error) {
             setError(error.message);
             setMensaje('');
@@ -41,7 +41,7 @@ function CrearPersonaje() {
                 </div>
                 <div>
                     <label>Whatsapp:</label>
-                    <input type="number" name="Whatsapp" value={nuevoPersonaje.Whatsapp} onChange={handleChange} required />
+                    <input type="whatsapp" name="whatsapp" value={nuevoPersonaje.whatsapp} onChange={handleChange} required />
                 </div>
                 <button type="submit">Crear Personaje</button>
             </form>
